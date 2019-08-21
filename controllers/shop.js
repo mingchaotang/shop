@@ -38,6 +38,14 @@ exports.getCart = (req, res, next) => {
   });
 };
 
+exports.postCart = (req, res, next) => {
+  const prodId = req.body.productId;
+  // const product = new Product(title, imageUrl, description, price);
+  // product.save();
+  console.log(prodId);
+  res.redirect('/cart');
+};
+
 exports.getOrders = (req, res, next) => {
   res.render('shop/orders', {
     pageTitle: 'Your Orders',
